@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="do_serialize" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/do_serialize"/>
+	<entry name="overlapping_outputs" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/overlapping_outputs"/>
+	<entry name="raise_on_click" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/raise_on_click"/>
+	<entry name="toggle_window_maximized_horizontally_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/toggle_window_maximized_horizontally_key"/>
+	<entry name="click_to_focus" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/click_to_focus"/>
+	<entry name="close_window_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/close_window_button"/>
+	<entry name="active_plugins" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/active_plugins"/>
+	<entry name="ping_delay" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/ping_delay"/>
+	<entry name="vsize" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/vsize"/>
+	<entry name="edge_delay" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/edge_delay"/>
+	<entry name="toggle_window_shaded_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/toggle_window_shaded_key"/>
+	<entry name="show_desktop_edge" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/show_desktop_edge"/>
+	<entry name="toggle_window_maximized_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/toggle_window_maximized_key"/>
+	<entry name="hide_skip_taskbar_windows" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/hide_skip_taskbar_windows"/>
+	<entry name="autoraise" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/autoraise"/>
+	<entry name="raise_window_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/raise_window_button"/>
+	<entry name="number_of_desktops" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/number_of_desktops"/>
+	<entry name="lower_window_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/lower_window_key"/>
+	<entry name="minimize_window_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/minimize_window_key"/>
+	<entry name="window_menu_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/window_menu_button"/>
+	<entry name="toggle_window_maximized_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/toggle_window_maximized_button"/>
+	<entry name="minimize_window_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/minimize_window_button"/>
+	<entry name="show_desktop_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/show_desktop_key"/>
+	<entry name="audible_bell" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/audible_bell"/>
+	<entry name="window_menu_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/window_menu_key"/>
+	<entry name="default_icon" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/default_icon"/>
+	<entry name="close_window_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/close_window_key"/>
+	<entry name="autoraise_delay" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/autoraise_delay"/>
+	<entry name="raise_window_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/raise_window_key"/>
+	<entry name="maximize_window_vertically_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/maximize_window_vertically_key"/>
+	<entry name="detect_outputs" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/detect_outputs"/>
+	<entry name="hsize" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/hsize"/>
+	<entry name="focus_prevention_level" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/focus_prevention_level"/>
+	<entry name="focus_prevention_match" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/focus_prevention_match"/>
+	<entry name="maximize_window_horizontally_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/maximize_window_horizontally_key"/>
+	<entry name="lower_window_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/lower_window_button"/>
+	<entry name="outputs" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/outputs"/>
+	<entry name="unmaximize_window_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/unmaximize_window_key"/>
+	<entry name="toggle_window_maximized_vertically_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/toggle_window_maximized_vertically_key"/>
+	<entry name="ignore_hints_when_maximized" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/ignore_hints_when_maximized"/>
+	<entry name="maximize_window_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/core/screen0/options/maximize_window_key"/>
+</gconf>

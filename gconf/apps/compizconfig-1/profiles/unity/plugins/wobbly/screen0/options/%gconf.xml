@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="focus_window_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/focus_window_match"/>
+	<entry name="focus_effect" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/focus_effect"/>
+	<entry name="maximize_effect" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/maximize_effect"/>
+	<entry name="spring_k" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/spring_k"/>
+	<entry name="grid_resolution" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/grid_resolution"/>
+	<entry name="map_effect" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/map_effect"/>
+	<entry name="move_window_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/move_window_match"/>
+	<entry name="friction" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/friction"/>
+	<entry name="map_window_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/map_window_match"/>
+	<entry name="snap_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/snap_key"/>
+	<entry name="min_grid_size" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/min_grid_size"/>
+	<entry name="shiver" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/shiver"/>
+	<entry name="snap_inverted" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/snap_inverted"/>
+	<entry name="grab_window_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/wobbly/screen0/options/grab_window_match"/>
+</gconf>

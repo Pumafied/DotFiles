@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="snapoff_maximized" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/snapoff_maximized"/>
+	<entry name="left_edge_threshold" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/left_edge_threshold"/>
+	<entry name="right_edge_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/right_edge_action"/>
+	<entry name="top_left_corner_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/top_left_corner_action"/>
+	<entry name="bottom_edge_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_edge_action"/>
+	<entry name="put_restore_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_restore_key"/>
+	<entry name="put_bottomleft_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_bottomleft_key"/>
+	<entry name="top_edge_threshold" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/top_edge_threshold"/>
+	<entry name="put_topleft_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_topleft_key"/>
+	<entry name="right_edge_threshold" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/right_edge_threshold"/>
+	<entry name="left_edge_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/left_edge_action"/>
+	<entry name="fill_color" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/fill_color"/>
+	<entry name="outline_color" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/outline_color"/>
+	<entry name="put_right_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_right_key"/>
+	<entry name="bottom_right_corner_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_right_corner_action"/>
+	<entry name="put_maximize_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_maximize_key"/>
+	<entry name="top_right_corner_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/top_right_corner_action"/>
+	<entry name="snapback_windows" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/snapback_windows"/>
+	<entry name="put_center_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_center_key"/>
+	<entry name="put_bottomright_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_bottomright_key"/>
+	<entry name="put_left_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_left_key"/>
+	<entry name="put_top_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_top_key"/>
+	<entry name="draw_indicator" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/draw_indicator"/>
+	<entry name="bottom_left_corner_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_left_corner_action"/>
+	<entry name="top_edge_action" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/top_edge_action"/>
+	<entry name="put_topright_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_topright_key"/>
+	<entry name="put_bottom_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/put_bottom_key"/>
+	<entry name="bottom_edge_threshold" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_edge_threshold"/>
+</gconf>

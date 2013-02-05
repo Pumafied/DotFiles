@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="mmmode" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/mmmode"/>
+	<entry name="up_window_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/up_window_key"/>
+	<entry name="flip_up_edge" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_up_edge"/>
+	<entry name="flip_right_edge" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_right_edge"/>
+	<entry name="prev_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/prev_key"/>
+	<entry name="prev_button" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/prev_button"/>
+	<entry name="preview_timeout" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/preview_timeout"/>
+	<entry name="flip_left_edge" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_left_edge"/>
+	<entry name="border_width" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/border_width"/>
+	<entry name="miniscreen" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/miniscreen"/>
+	<entry name="outline_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/outline_color"/>
+	<entry name="no_slide_match" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/no_slide_match"/>
+	<entry name="preview_scale" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/preview_scale"/>
+	<entry name="up_button" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/up_button"/>
+	<entry name="up_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/up_key"/>
+	<entry name="allow_wraparound" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/allow_wraparound"/>
+	<entry name="left_window_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/left_window_key"/>
+	<entry name="right_window_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/right_window_key"/>
+	<entry name="right_button" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/right_button"/>
+	<entry name="slide_duration" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/slide_duration"/>
+	<entry name="edgeflip_dnd" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/edgeflip_dnd"/>
+	<entry name="left_button" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/left_button"/>
+	<entry name="thumb_highlight_gradient_shadow_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_highlight_gradient_shadow_color"/>
+	<entry name="show_switcher" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/show_switcher"/>
+	<entry name="down_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/down_key"/>
+	<entry name="thumb_gradient_highlight_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_gradient_highlight_color"/>
+	<entry name="flip_down_edge" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_down_edge"/>
+	<entry name="edge_radius" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/edge_radius"/>
+	<entry name="background_gradient_shadow_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/background_gradient_shadow_color"/>
+	<entry name="background_gradient_base_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/background_gradient_base_color"/>
+	<entry name="edgeflip_pointer" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/edgeflip_pointer"/>
+	<entry name="thumb_highlight_gradient_base_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_highlight_gradient_base_color"/>
+	<entry name="down_window_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/down_window_key"/>
+	<entry name="thumb_gradient_base_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_gradient_base_color"/>
+	<entry name="next_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/next_key"/>
+	<entry name="down_button" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/down_button"/>
+	<entry name="edgeflip_move" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/edgeflip_move"/>
+	<entry name="arrow_shadow_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/arrow_shadow_color"/>
+	<entry name="arrow_base_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/arrow_base_color"/>
+	<entry name="right_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/right_key"/>
+	<entry name="background_gradient_highlight_color" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/background_gradient_highlight_color"/>
+	<entry name="next_button" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/next_button"/>
+	<entry name="left_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/wall/screen0/options/left_key"/>
+</gconf>

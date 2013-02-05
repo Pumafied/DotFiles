@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show_desktop" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/show_desktop"/>
+	<entry name="initiate_group_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_group_button"/>
+	<entry name="initiate_all_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_all_button"/>
+	<entry name="button_bindings_toggle" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/button_bindings_toggle"/>
+	<entry name="initiate_all_edge" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_all_edge"/>
+	<entry name="overlay_icon" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/overlay_icon"/>
+	<entry name="spacing" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/spacing"/>
+	<entry name="initiate_group_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_group_key"/>
+	<entry name="timestep" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/timestep"/>
+	<entry name="multioutput_mode" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/multioutput_mode"/>
+	<entry name="key_bindings_toggle" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/key_bindings_toggle"/>
+	<entry name="opacity" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/opacity"/>
+	<entry name="initiate_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_button"/>
+	<entry name="darken_back" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/darken_back"/>
+	<entry name="initiate_edge" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_edge"/>
+	<entry name="initiate_group_edge" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_group_edge"/>
+	<entry name="initiate_output_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_output_button"/>
+	<entry name="window_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/window_match"/>
+	<entry name="speed" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/speed"/>
+	<entry name="initiate_output_edge" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_output_edge"/>
+	<entry name="initiate_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_key"/>
+	<entry name="dnd_distance" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/dnd_distance"/>
+	<entry name="initiate_all_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_all_key"/>
+	<entry name="initiate_output_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_output_key"/>
+	<entry name="hover_time" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/scale/screen0/options/hover_time"/>
+</gconf>

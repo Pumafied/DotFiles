@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="y_offset" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/y_offset"/>
+	<entry name="mipmaps" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/mipmaps"/>
+	<entry name="vp_saturation" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/vp_saturation"/>
+	<entry name="hide_docks" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/hide_docks"/>
+	<entry name="ground_size" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/ground_size"/>
+	<entry name="vp_brightness" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/vp_brightness"/>
+	<entry name="ground_color1" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/ground_color1"/>
+	<entry name="multioutput_mode" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/multioutput_mode"/>
+	<entry name="ground_color2" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/ground_color2"/>
+	<entry name="aspect_ratio" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/aspect_ratio"/>
+	<entry name="expo_key" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_key"/>
+	<entry name="exit_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/exit_button"/>
+	<entry name="next_vp_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/next_vp_button"/>
+	<entry name="reflection" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/reflection"/>
+	<entry name="zoom_time" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/zoom_time"/>
+	<entry name="dnd_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/dnd_button"/>
+	<entry name="selected_color" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/selected_color"/>
+	<entry name="vp_distance" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/vp_distance"/>
+	<entry name="expo_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_button"/>
+	<entry name="curve" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/curve"/>
+	<entry name="deform" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/deform"/>
+	<entry name="double_click_time" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/double_click_time"/>
+	<entry name="expo_edge" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_edge"/>
+	<entry name="distance" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/distance"/>
+	<entry name="x_offset" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/x_offset"/>
+	<entry name="expo_animation" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_animation"/>
+	<entry name="expo_immediate_move" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_immediate_move"/>
+	<entry name="prev_vp_button" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/prev_vp_button"/>
+	<entry name="scale_factor" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/expo/screen0/options/scale_factor"/>
+</gconf>

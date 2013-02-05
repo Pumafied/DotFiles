@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="default_profile" mtime="1352308110" type="string">
+		<stringvalue>Profile1</stringvalue>
+	</entry>
+	<entry name="profile_list" mtime="1352307873" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>Profile0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Default</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Profile1</stringvalue>
+		</li>
+	</entry>
+</gconf>

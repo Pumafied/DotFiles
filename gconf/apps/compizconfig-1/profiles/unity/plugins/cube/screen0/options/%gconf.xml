@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="acceleration" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/acceleration"/>
+	<entry name="skydome" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/skydome"/>
+	<entry name="top_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/top_color"/>
+	<entry name="mipmap" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/mipmap"/>
+	<entry name="skydome_image" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/skydome_image"/>
+	<entry name="skydome_animated" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/skydome_animated"/>
+	<entry name="timestep" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/timestep"/>
+	<entry name="in" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/in"/>
+	<entry name="multioutput_mode" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/multioutput_mode"/>
+	<entry name="active_opacity" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/active_opacity"/>
+	<entry name="unfold_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/unfold_key"/>
+	<entry name="skydome_gradient_start_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/skydome_gradient_start_color"/>
+	<entry name="speed" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/speed"/>
+	<entry name="inactive_opacity" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/inactive_opacity"/>
+	<entry name="bottom_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/bottom_color"/>
+	<entry name="transparent_manual_only" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/transparent_manual_only"/>
+	<entry name="skydome_gradient_end_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/cube/screen0/options/skydome_gradient_end_color"/>
+</gconf>

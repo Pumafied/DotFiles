@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="mouse_poll_interval" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/mousepoll/screen0/options/mouse_poll_interval"/>
+</gconf>

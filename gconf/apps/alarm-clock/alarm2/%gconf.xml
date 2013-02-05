@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="command" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/command" type="string">
+		<stringvalue>rhythmbox-client --play</stringvalue>
+	</entry>
+	<entry name="active" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/active" type="bool" value="false"/>
+	<entry name="time" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/time" type="int" value="420"/>
+	<entry name="timestamp" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/timestamp" type="int" value="1349154420"/>
+	<entry name="notify_type" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/notify_type"/>
+	<entry name="sound_file" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/sound_file" type="string">
+		<stringvalue>file:///usr/share/sounds/gnome/default/alerts/bark.ogg</stringvalue>
+	</entry>
+	<entry name="sound_repeat" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/sound_repeat" type="bool" value="true"/>
+	<entry name="type" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/type" type="string">
+		<stringvalue>clock</stringvalue>
+	</entry>
+	<entry name="message" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/message" type="string">
+		<stringvalue>Alarm!</stringvalue>
+	</entry>
+	<entry name="repeat" mtime="1351910527" schema="/schemas/apps/alarm-clock/alarm/repeat"/>
+</gconf>

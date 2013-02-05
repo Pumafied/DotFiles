@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="normal_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/normal_match"/>
+	<entry name="centered_modifier" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/centered_modifier"/>
+	<entry name="outline_modifier" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/outline_modifier"/>
+	<entry name="stretch_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/stretch_match"/>
+	<entry name="initiate_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/initiate_button"/>
+	<entry name="resize_from_center" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/resize_from_center"/>
+	<entry name="fill_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/fill_color"/>
+	<entry name="mode" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/mode"/>
+	<entry name="border_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/border_color"/>
+	<entry name="rectangle_modifier" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/rectangle_modifier"/>
+	<entry name="stretch_modifier" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/stretch_modifier"/>
+	<entry name="initiate_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/initiate_key"/>
+	<entry name="resize_from_center_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/resize_from_center_match"/>
+	<entry name="rectangle_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/rectangle_match"/>
+	<entry name="outline_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/resize/screen0/options/outline_match"/>
+</gconf>

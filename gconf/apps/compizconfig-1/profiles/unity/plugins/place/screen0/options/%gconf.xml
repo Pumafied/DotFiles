@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="force_placement_match" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/force_placement_match"/>
+	<entry name="position_matches" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/position_matches"/>
+	<entry name="viewport_x_values" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/viewport_x_values"/>
+	<entry name="position_x_values" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/position_x_values"/>
+	<entry name="viewport_y_values" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/viewport_y_values"/>
+	<entry name="multioutput_mode" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/multioutput_mode"/>
+	<entry name="position_y_values" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/position_y_values"/>
+	<entry name="viewport_matches" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/viewport_matches"/>
+	<entry name="workarounds" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/workarounds"/>
+	<entry name="mode_modes" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/mode_modes"/>
+	<entry name="mode" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/mode"/>
+	<entry name="mode_matches" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/mode_matches"/>
+	<entry name="position_constrain_workarea" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/place/screen0/options/position_constrain_workarea"/>
+</gconf>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="erase_width" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/erase_width"/>
+	<entry name="stroke_width" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/stroke_width"/>
+	<entry name="erase_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/erase_button"/>
+	<entry name="initiate_rectangle_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/initiate_rectangle_button"/>
+	<entry name="clear_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/clear_button"/>
+	<entry name="draw_shapes_from_center" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/draw_shapes_from_center"/>
+	<entry name="initiate_line_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/initiate_line_button"/>
+	<entry name="fill_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/fill_color"/>
+	<entry name="initiate_ellipse_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/initiate_ellipse_button"/>
+	<entry name="initiate_free_draw_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/initiate_free_draw_button"/>
+	<entry name="stroke_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/stroke_color"/>
+	<entry name="clear_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/annotate/screen0/options/clear_key"/>
+</gconf>

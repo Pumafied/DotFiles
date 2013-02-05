@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="command" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/command"/>
+	<entry name="inactive_shadow_radius" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_radius"/>
+	<entry name="decoration_match" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/decoration_match"/>
+	<entry name="mipmap" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/mipmap"/>
+	<entry name="inactive_shadow_opacity" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_opacity"/>
+	<entry name="inactive_shadow_x_offset" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_x_offset"/>
+	<entry name="inactive_shadow_color" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_color"/>
+	<entry name="active_shadow_radius" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_radius"/>
+	<entry name="inactive_shadow_y_offset" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_y_offset"/>
+	<entry name="shadow_match" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/shadow_match"/>
+	<entry name="active_shadow_x_offset" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_x_offset"/>
+	<entry name="active_shadow_y_offset" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_y_offset"/>
+	<entry name="active_shadow_opacity" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_opacity"/>
+	<entry name="active_shadow_color" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_color"/>
+</gconf>

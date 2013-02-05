@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="y_offset" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/y_offset"/>
+	<entry name="box_color" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/box_color"/>
+	<entry name="overlay" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/overlay"/>
+	<entry name="mask" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/mask"/>
+	<entry name="box_width" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/box_width"/>
+	<entry name="initiate" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/initiate"/>
+	<entry name="timestep" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/timestep"/>
+	<entry name="radius" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/radius"/>
+	<entry name="zoom_in_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/zoom_in_button"/>
+	<entry name="keep_screen" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/keep_screen"/>
+	<entry name="border" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/border"/>
+	<entry name="mode" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/mode"/>
+	<entry name="speed" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/speed"/>
+	<entry name="zoom_factor" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/zoom_factor"/>
+	<entry name="box_height" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/box_height"/>
+	<entry name="x_offset" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/x_offset"/>
+	<entry name="zoom_out_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/mag/screen0/options/zoom_out_button"/>
+</gconf>

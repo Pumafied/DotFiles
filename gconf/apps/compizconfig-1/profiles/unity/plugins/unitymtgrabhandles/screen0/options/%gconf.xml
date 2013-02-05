@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="fade_duration" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/unitymtgrabhandles/screen0/options/fade_duration"/>
+	<entry name="toggle_handles_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/unitymtgrabhandles/screen0/options/toggle_handles_key"/>
+	<entry name="hide_handles_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/unitymtgrabhandles/screen0/options/hide_handles_key"/>
+	<entry name="show_handles_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/unitymtgrabhandles/screen0/options/show_handles_key"/>
+</gconf>

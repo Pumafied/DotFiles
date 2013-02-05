@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="edges_categories" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/snap/screen0/options/edges_categories"/>
+	<entry name="attraction_distance" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/snap/screen0/options/attraction_distance"/>
+	<entry name="resistance_distance" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/snap/screen0/options/resistance_distance"/>
+	<entry name="snap_type" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/snap/screen0/options/snap_type"/>
+	<entry name="avoid_snap" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/snap/screen0/options/avoid_snap"/>
+</gconf>

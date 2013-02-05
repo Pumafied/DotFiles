@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ignore_match" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/session/screen0/options/ignore_match"/>
+	<entry name="save_legacy" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/session/screen0/options/save_legacy"/>
+</gconf>

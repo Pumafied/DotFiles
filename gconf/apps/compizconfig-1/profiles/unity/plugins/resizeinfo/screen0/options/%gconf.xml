@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gradient_3" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_3"/>
+	<entry name="always_show" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/always_show"/>
+	<entry name="gradient_2" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_2"/>
+	<entry name="gradient_1" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_1"/>
+	<entry name="fade_time" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/fade_time"/>
+	<entry name="text_color" mtime="1350417921" schema="/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/text_color"/>
+</gconf>

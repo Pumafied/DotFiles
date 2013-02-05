@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="saturation_matches" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_matches"/>
+	<entry name="opacity_increase_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_key"/>
+	<entry name="saturation_step" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_step"/>
+	<entry name="saturation_decrease_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_key"/>
+	<entry name="saturation_increase_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_key"/>
+	<entry name="saturation_values" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_values"/>
+	<entry name="opacity_increase_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_button"/>
+	<entry name="opacity_decrease_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_button"/>
+	<entry name="brightness_step" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_step"/>
+	<entry name="brightness_decrease_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_key"/>
+	<entry name="saturation_increase_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_button"/>
+	<entry name="brightness_decrease_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_button"/>
+	<entry name="brightness_increase_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_button"/>
+	<entry name="opacity_decrease_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_key"/>
+	<entry name="brightness_values" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_values"/>
+	<entry name="brightness_matches" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_matches"/>
+	<entry name="opacity_step" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_step"/>
+	<entry name="opacity_matches" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_matches"/>
+	<entry name="opacity_values" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_values"/>
+	<entry name="brightness_increase_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_key"/>
+	<entry name="saturation_decrease_button" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_button"/>
+</gconf>

@@ -1,0 +1,70 @@
+xftfont DejaVu Sans Mono:pixelsize=20
+xftalpha 0.8
+text_buffer_size 2048
+update_interval 1.0
+total_run_times 0
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+stippled_borders 0
+border_margin 1
+default_color D0D0D0
+own_window_colour black
+alignment top_right 
+no_buffers yes
+uppercase no
+cpu_avg_samples 1
+net_avg_samples 1
+# own window options
+own_window yes
+own_window_type desktop
+#own_window_hints undecorated,skip_taskbar,sticky
+own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
+
+TEXT
+${alignc}#! System
+$nodename${alignr 4}$sysname $machine
+$alignc$kernel
+UpTime: ${alignr 4}$uptime_short
+Power: ${alignr 2}
+Capacity: ${battery_bar 5,35 BAT0}${alignr 4}$battery_percent%
+Time left:${alignr 2}$battery_time
+
+
+${alignc}#! Disks
+Hdd: ${fs_used_perc /} % ${alignr 4}${fs_bar 5,45 /}
+Ram: $memperc % ${alignr 4}${membar 5,45}
+Swap: $swapperc % ${alignr 4}${swapbar 5,45}
+I/O: ${alignr 4}$diskio
+${alignc}${diskiograph 10,90}
+${alignc}${loadgraph 10,90}
+
+${alignc}#! Net
+${if_existing /proc/net/route eth0}$alignc Wired Connection
+IP:${alignr 4}${addr eth0}
+Up:${alignr 4}${upspeed eth0}k/s
+${alignc}${upspeedgraph eth0 10,85}
+Down:${alignr 4}${downspeed eth0}k/s
+${alignc}${downspeedgraph eth0 10,85}
+${else}${alignc}NetWork
+${alignc}Wire Disconnected 
+${endif}
+
+${if_existing /proc/net/route wlan0}$alignc Wireless Connection
+IP:${alignr 4}${addr wlan0}
+Up:${alignr 4}${upspeed wlan0}k/s
+${alignc}${upspeedgraph wlan0 10,85}
+Down:${alignr 4}${downspeed wlan0}k/s
+${alignc}${downspeedgraph wlan0 10,85}
+${else}${alignc}NetWork
+${alignc}Wireless Disconnected
+${endif}
+
+
+#ADD heroku status command output
+#ADD Heroku Getan ps
+#ADD 
+
+

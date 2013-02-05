@@ -1,0 +1,156 @@
+# tmux display things in 256 colors
+set -g default-terminal "screen-256color"
+
+set -g history-limit 20000
+
+# unbind default prefix and set it to Ctrl+a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# Activity Monitoring
+setw -g monitor-activity off
+set -g visual-activity off
+
+# reattach to user namespace
+# set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# Rather than constraining window size to the maximum size of any client 
+# connected to the *session*, constrain window size to the maximum size of any 
+# client connected to *that window*. Much more reasonable.
+setw -g aggressive-resize on
+
+# make delay shorter
+set -sg escape-time 0
+
+# tile all windows
+unbind =
+bind = select-layout tiled
+
+# cycle through panes
+unbind C-a
+unbind o # this is the default key for cycling panes
+bind ^A select-pane -t:.+
+
+# make window/pane index start with 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+# set-option -g set-titles on
+# set-option -g set-titles-string "#T - #W"
+# set-window-option -g automatic-rename on
+
+######################
+#### Key Bindings ####
+######################
+
+# reload config file
+bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
+
+# quickly open a new window
+bind N new-window
+
+# Activity
+setw -g monitor-activity on
+set -g visual-activity off
+
+# split window
+bind | split-window -h
+bind - split-window -v
+
+# synchronize all panes in a window
+bind z setw synchronize-panes
+
+# pane movement shortcuts
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# Resize pane shortcuts
+bind -r H resize-pane -L 10
+bind -r J resize-pane -D 10
+bind -r K resize-pane -U 10
+bind -r L resize-pane -R 10
+
+# enable mouse mode
+setw -g mode-mouse off
+set -g mouse-select-pane off
+set -g mouse-resize-pane off
+set -g mouse-select-window off
+
+# maximizing and restoring windows
+unbind Up
+bind Up new-window -d -n fullscreen \; swap-pane -s fullscreen.1 \; select-window -t fullscreen
+unbind Down
+bind Down last-window \; swap-pane -s fullscreen.1 \; kill-window -t fullscreen
+
+# set vi mode for copy mode
+setw -g mode-keys vi
+# more settings to make copy-mode more vim-like
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -t vi-copy 'v' begin-selection
+bind -t vi-copy 'y' copy-selection
+
+######################
+### Color Settings ###
+######################
+
+#### COLOUR
+
+# default statusbar colors
+set-option -g status-bg colour232
+set-option -g status-fg colour26
+set-option -g status-attr default
+
+# default window title colors
+set-window-option -g window-status-fg colour244
+set-window-option -g window-status-bg default
+#set-window-option -g window-status-attr dim
+
+# active window title colors
+set-window-option -g window-status-current-fg colour26
+set-window-option -g window-status-current-bg default
+#set-window-option -g window-status-current-attr bright
+
+# pane border
+set-option -g pane-border-fg colour245
+set-option -g pane-active-border-fg colour240
+
+# message text
+set-option -g message-bg colour232
+set-option -g message-fg colour26
+
+# pane number display
+set-option -g display-panes-active-colour colour33
+set-option -g display-panes-colour colour166
+
+# clock
+set-window-option -g clock-mode-colour colour26
+
+##################
+#### Plugins #####
+##################
+
+tm_date='#[fg=colour245] %R  %d %b'
+tm_host='#[fg=colour198,bg=colour232,bold]#h'
+tm_session_name='#[fg=colour198,bg=colour232,bold] Dev #S'
+tm_mail='#[fg=colour196,bold]✉ #(~/.dotfiles/bin/mail.scpt -ug)'
+
+set -g status-left-length 32
+set -g status-right-length 150
+set -g status-interval 5
+set -g window-status-format "#[fg=colour239,bg=colour232] #I #W "
+
+
+# set -g window-status-current-format "#[fg=colour232,bg=colour26]#[fg=colour16,bg=colour26,noreverse,bold] #I #W #[fg=colour26,bg=colour232,nobold]"
+set -g window-status-current-format "#[fg=colour232,bg=colour26]#[fg=colour16,bg=colour26,noreverse,bold] #I #W #[fg=colour26,bg=colour232,nobold]"
+set -g status-left $tm_session_name 
+set -g status-right  '$tm_date' '$tm_host
+
