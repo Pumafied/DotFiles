@@ -1,80 +1,92 @@
 call pathogen#infect()
 colorscheme sweyla751738
 
-"TODO Bind capital q and capital w to the lower case forms of it 
-
+"Enables mouse support
 set mouse =a
 
-"Sets no back to remove annoying backup files
-set nobackup
+"-------------Key Bindings---------------"
 
 "Sets the leader char to comma 
-
 let mapleader = ","
-"Removes compatibility with vi
-set nocompatible 
 
-set relativenumber
+"edit ~/.vimrc
+map <leader>e :e! ~/.vimrc<cr>
 
-"Adds persistant macros
-"let @z = 
+"Write a file with sudo privledges
+cmap w!! w !sudo tee % >/dev/null
 
 "Toggles wrapping
-nmap <F5> :set wrap!<CR>
 nmap <F2> :set paste!<CR>
+"enable nerd tree toggle
+nmap <F3> :NERDTreeToggle<CR>
+"Turns off the highlighting in the source
+nmap <F4> :set hlsearch!<CR>
+"Toggles text wrapping for use with large arrays
+nmap <F5> :set wrap!<CR>
 nmap <F12> :set spell!<CR>
+
+"This makes vim splits easier to use
+nmap <leader>aa :topleft  vnew<CR>
+nmap <leader>dd :botright vnew<CR>
+nmap <leader>ww :topleft  new<CR>
+nmap <leader>ss :botright new<CR>
+
+"-----------------End of Keybindings---------------------"
+"--------------Internal settings-----------"
 
 "Turns on syntax highlighting
 sy on
 
-filetype plugin indent on
-
-"This makes vim splits easier to use
-"window
-nmap <leader>aa  :topleft  vnew<CR>
-nmap <leader>dd :botright vnew<CR>
-nmap <leader>ww    :topleft  new<CR>
-nmap <leader>ss  :botright new<CR>
-
-" buffer
-nmap <leader>sa   :leftabove  vnew<CR>
-nmap <leader>sd  :rightbelow vnew<CR>
-nmap <leader>sw    :leftabove  new<CR>
-nmap <leader>sf   :rightbelow new<CR>
-
-"Todo disable arrow keys only when in command mode
-
-" make backspace behave in a sane manner
-set backspace=indent,eol,start
-
-" change history to 1000
-set history=10000
-
-"This disables the swap file storage
+"Sets no back to remove annoying backup files
+set nobackup
 set noswapfile
 
-"enable nerd tree toggle
-nmap <F3> :NERDTreeToggle<CR>
-" Tab control
+"Change history to 1000
+set history=10000
+
+"Tab control
 set smarttab
 set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
+"Auto writes all when focues is lost
+autocmd BufLeave,FocusLost * silent! wall
+
+"Removes compatibility with vi
+set nocompatible 
+
+" make backspace behave in a sane manner
+set backspace=indent,eol,start
+
+"----------End Internal Settings----------"
+"----------UI settings---------------"
+
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+
+"Undo settings 
+set undodir=~/vimundo
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+"When wrapping paragraphs, don't end lines with 1-letter words (looks stupid)
+set formatoptions+=1 
+
+set relativenumber
+
+filetype plugin indent on
+
 " faster redrawing
 set ttyfast
 
-set wildmenu " enhanced command line completion
+" enhanced command line completion
+set wildmenu 
 
 set nolazyredraw " don't redraw while executing macros
 
-set noswapfile
-
-set laststatus=2 " show the satus line all the time
-
-" edit ~/.vimrc
-map <leader>e :e! ~/.vimrc<cr>
-
-"Turns off the highlighting in the source
-nmap <F4> :set hlsearch!<CR>
+set laststatus=2 " show the status line all the time
+"----------End UI Settings----------------"
