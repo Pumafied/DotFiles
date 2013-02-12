@@ -12,6 +12,9 @@ alias .....="cd ../../../.."
 alias l="ls -lah --color=auto"
 alias la="ls -AF --color=auto"
 alias ll="ls -lFh --color=auto"
+
+alias dual="xrandr --output VGA1 --auto --above LVDS1$1 xrandr --output LVDS1 --auto"
+
 alias rmf="rm -rf"
 
 #shortcut to getan test
@@ -20,8 +23,7 @@ alias getan="cd ~/Documents/lampp/getan/test"
 # shortcut to dotfiles
 alias dot="cd ~/DotFiles"
 
-#Shortcuts to go to the AP workspace
-
+#Shortcut to go to the AP workspace
 alias ap="cd ~/Documents/APCOMPSCI"
 
 # Helpers
@@ -49,9 +51,6 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
@@ -69,11 +68,14 @@ alias fs="stat -f \"%z bytes\""
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # Empty the Trash on all mounted volumes and the main HDD
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+# removed for lack of a mackkk
+#alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
+
+#Disabled for lack of mac
 # Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+#alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+#alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
@@ -87,4 +89,4 @@ done
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+alias hax="notify-send -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"

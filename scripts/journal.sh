@@ -14,5 +14,5 @@
 #-------------------------------------------
 
 export DISPLAY=:0
-echo -n "\n[" `date` "] :\n" >> ~/DotFiles/.journal
+echo -n "\n[" `date` "] :\n" >> ~/Documents/Austin-Lubker-Thinktank/.journal
 /usr/bin/gvim -geometry 100x40+512+400 + ~/Documents/Austin-Lubker-Thinktank/.journal
