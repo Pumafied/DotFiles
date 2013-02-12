@@ -13,7 +13,8 @@ alias l="ls -lah --color=auto"
 alias la="ls -AF --color=auto"
 alias ll="ls -lFh --color=auto"
 
-alias dual="xrandr --output VGA1 --auto --above LVDS1$1 xrandr --output LVDS1 --auto"
+alias dual="sh ~/DotFiles/scripts/dualMonitor.sh"
+alias one="sh ~/DotFiles/scripts/oneMonitor.sh"
 
 alias rmf="rm -rf"
 
