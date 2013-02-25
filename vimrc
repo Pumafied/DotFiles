@@ -23,6 +23,8 @@ nmap <F3> :NERDTreeToggle<CR>
 nmap <F4> :set hlsearch!<CR>
 "Toggles text wrapping for use with large arrays
 nmap <F5> :set wrap!<CR>
+nmap <F6> :set list!<CR>
+nmap <F9> :SyntasticToggleMode<CR>
 nmap <F12> :set spell!<CR>
 
 "This makes vim splits easier to use
@@ -30,7 +32,8 @@ nmap <leader>aa :topleft  vnew<CR>
 nmap <leader>dd :botright vnew<CR>
 nmap <leader>ww :topleft  new<CR>
 nmap <leader>ss :botright new<CR>
-
+"Zen coding expand key
+let g:user_zen_expandabbr_key = '<c-e>'
 "-----------------End of Keybindings---------------------"
 "--------------Internal settings-----------"
 
@@ -44,6 +47,8 @@ set noswapfile
 "Change history to 1000
 set history=10000
 
+set hidden
+
 "Tab control
 set smarttab
 set expandtab
@@ -54,6 +59,9 @@ set softtabstop=4
 "Auto writes all when focues is lost
 autocmd BufLeave,FocusLost * silent! wall
 
+"Auto strips trailing white spaces
+""Auto strips trailing white spaces
+"Auto strips trailing white spaces
 "Removes compatibility with vi
 set nocompatible 
 
@@ -62,13 +70,15 @@ set backspace=indent,eol,start
 
 "----------End Internal Settings----------"
 "----------UI settings---------------"
+set nofoldenable
+set listchars=tab:▸\ ,eol:¬
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
 "Undo settings 
-set undodir=~/vimundo
+set undodir=~/.vimundo
 set undofile
 set undolevels=1000
 set undoreload=10000
@@ -83,10 +93,30 @@ filetype plugin indent on
 " faster redrawing
 set ttyfast
 
+"For use with vim gutter
+highlight clear SignColumn
+
 " enhanced command line completion
 set wildmenu 
 
 set nolazyredraw " don't redraw while executing macros
 
 set laststatus=2 " show the status line all the time
+"Auto strips trailing white spaces
+if has("autocmd")
+    autocmd BufWritePre *java,*.py,*.js :call <SID>StripTrailingWhitespaces()
+endif
 "----------End UI Settings----------------"
+"----------Functions-------------"
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction

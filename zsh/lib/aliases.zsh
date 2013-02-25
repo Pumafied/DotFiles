@@ -16,6 +16,12 @@ alias ll="ls -lFh --color=auto"
 alias dual="sh ~/DotFiles/scripts/dualMonitor.sh"
 alias one="sh ~/DotFiles/scripts/oneMonitor.sh"
 
+#allows for easy editing of aliases
+alias aliases="vim ~/DotFiles/zsh/lib/aliases.zsh"
+
+#simply for convience
+alias py="python"
+
 alias rmf="rm -rf"
 
 #shortcut to getan test
@@ -62,32 +68,16 @@ alias trimcopy="tr -d '\n' | pbcopy"
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-# File size
-alias fs="stat -f \"%z bytes\""
-
-# ROT13-encode text. Works for decoding, too! ;)
-alias rot13='tr a-zA-Z n-za-mN-ZA-M'
-
 # Empty the Trash on all mounted volumes and the main HDD
 # removed for lack of a mackkk
 #alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
-
 
 #Disabled for lack of mac
 # Hide/show all desktop icons (useful when presenting)
 #alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 #alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-
-# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
-
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="lwp-request -m '$method'"
 done
-
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 10'"
-alias hax="notify-send -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
