@@ -9,6 +9,7 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias ls="ls --color=auto"
 alias l="ls -lah --color=auto"
 alias la="ls -AF --color=auto"
 alias ll="ls -lFh --color=auto"
