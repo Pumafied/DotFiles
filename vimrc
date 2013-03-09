@@ -1,16 +1,19 @@
 call pathogen#infect()
 colorscheme sweyla751738
 
+filetype plugin on
+
 "Enables mouse support
 set mouse =a
 
 "-------------Key Bindings---------------"
 
-"Sets the leader char to comma 
+"Sets the leader char to comma
 let mapleader = ","
 
 "edit ~/.vimrc
 map <leader>e :e! ~/.vimrc<cr>
+
 
 "Write a file with sudo privledges
 cmap w!! w !sudo tee % >/dev/null
@@ -24,6 +27,7 @@ nmap <F4> :set hlsearch!<CR>
 "Toggles text wrapping for use with large arrays
 nmap <F5> :set wrap!<CR>
 nmap <F6> :set list!<CR>
+nmap <F7> :set linebreak<CR>
 nmap <F9> :SyntasticToggleMode<CR>
 nmap <F12> :set spell!<CR>
 
@@ -34,6 +38,17 @@ nmap <leader>ww :topleft  new<CR>
 nmap <leader>ss :botright new<CR>
 "Zen coding expand key
 let g:user_zen_expandabbr_key = '<c-e>'
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+map <leader>ew :e ...
+map <leader>ew :sp ...
+map <leader>ew :vsp ...
+map <leader>et :tabe ...
+
 "-----------------End of Keybindings---------------------"
 "--------------Internal settings-----------"
 
@@ -59,11 +74,8 @@ set softtabstop=4
 "Auto writes all when focues is lost
 autocmd BufLeave,FocusLost * silent! wall
 
-"Auto strips trailing white spaces
-""Auto strips trailing white spaces
-"Auto strips trailing white spaces
 "Removes compatibility with vi
-set nocompatible 
+set nocompatible
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
@@ -77,14 +89,17 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
-"Undo settings 
+"fancy
+"let g:Powerline_symbols = 'fancy'
+
+"Undo settings
 set undodir=~/.vimundo
 set undofile
 set undolevels=1000
 set undoreload=10000
 
 "When wrapping paragraphs, don't end lines with 1-letter words (looks stupid)
-set formatoptions+=1 
+set formatoptions+=1
 
 set relativenumber
 
@@ -97,14 +112,14 @@ set ttyfast
 highlight clear SignColumn
 
 " enhanced command line completion
-set wildmenu 
+set wildmenu
 
 set nolazyredraw " don't redraw while executing macros
 
 set laststatus=2 " show the status line all the time
 "Auto strips trailing white spaces
 if has("autocmd")
-    autocmd BufWritePre *java,*.py,*.js :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 endif
 "----------End UI Settings----------------"
 "----------Functions-------------"

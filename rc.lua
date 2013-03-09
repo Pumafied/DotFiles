@@ -10,38 +10,32 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 vicious = require("vicious")
--- Initialize widget
-datewidget = widget({ type = "textbox" })
--- Register widget
-vicious.register(datewidget, vicious.widgets.date, "%b %d, %R", 60)
--- Initialize widget
-memwidget = awful.widget.progressbar()
--- Progressbar properties
-memwidget:set_width(8)
-memwidget:set_height(10)
-memwidget:set_vertical(true)
-memwidget:set_background_color("#494B4F")
-memwidget:set_border_color(nil)
-memwidget:set_color("#AECF96")
-memwidget:set_gradient_colors({ "#AECF96", "#88A175", "#FF5656" })
--- Register widget
-vicious.register(memwidget, vicious.widgets.mem, "$1", 13)
-
---RAM count
--- Initialize widget
-memwidget = widget({ type = "textbox" })
--- Register widget
-vicious.register(memwidget, vicious.widgets.mem, "$1% ($2MB/$3MB)", 13)
-
-size_hints_honor = false
 
 -- Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
+                     title = "You done fucked up!",
                      text = awesome.startup_errors })
+end
+
+-- Prepare the container that is used when constructing the wibox
+local delightful_container = { widgets = {}, icons = {} }
+if install_delightful then
+    for _, widget in pairs(awful.util.table.reverse(install_delightful)) do
+        local config = delightful_config and delightful_config[widget]
+        local widgets, icons = widget:load(config)
+        if widgets then
+            if not icons then
+                icons = {}
+            end
+            table.insert(delightful_container.widgets, awful.util.table.reverse(
+widgets))
+            table.insert(delightful_container.icons,   awful.util.table.reverse(
+icons))
+        end
+    end
 end
 
 -- Handle runtime errors after startup
@@ -92,8 +86,8 @@ layouts =
  -- Define a tag table which will hold all screen tags.
  tags = {
    names  = { "Main", "Web", "GIMP", "Coms", "RemoteMon", "Overflow"},
-   layout = { layouts[6], layouts[6], layouts[6], layouts[6], layouts[6],
-              layouts[6], layouts[6], layouts[6], layouts[6]
+   layout = { layouts[2], layouts[2], layouts[2], layouts[2], layouts[2],
+              layouts[2], layouts[2], layouts[2], layouts[2]
  }}
  for s = 1, screen.count() do
      -- Each screen has its own tag table.
@@ -210,7 +204,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
-	netwidget, 
+	netwidget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -228,15 +222,19 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    --Moves to the left workspace within monitor
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
+    --Moves to the right workspace within the monitor
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
+    --Moves to the last tag (workspace
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
-
+    --Rotates focus up
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
             if client.focus then client.focus:raise() end
         end),
+    --Rotates focus down
     awful.key({ modkey,           }, "k",
         function ()
             awful.client.focus.byidx(-1)
@@ -406,4 +404,16 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
+-- Autorun programs
+autorun = true
+autorunApps =
+{
+   "gnome-sound-applet",
+--   "nm-applet",
+   "conky",
+}
+if autorun then
+   for app = 1, #autorunApps do
+       awful.util.spawn(autorunApps[app])
+   end
+end
