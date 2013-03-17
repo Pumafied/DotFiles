@@ -101,6 +101,15 @@ set backspace=indent,eol,start
 
 "----------End Internal Settings----------"
 "----------UI settings---------------"
+"
+
+" error bells
+set noerrorbells
+set visualbell
+set t_vb=
+set tm=500
+
+
 set nofoldenable
 set listchars=tab:▸\ ,eol:¬
 
@@ -126,6 +135,12 @@ set ttyfast
 
 "For use with vim gutter
 highlight clear SignColumn
+
+"set terminal title
+set title
+
+" don't redraw while executing macros
+set nolazyredraw
 
 " enhanced command line completion
 set wildmenu
