@@ -14,7 +14,6 @@ let mapleader = ","
 "edit ~/.vimrc
 map <leader>e :e! ~/.vimrc<cr>
 
-
 "Write a file with sudo privledges
 cmap w!! w !sudo tee % >/dev/null
 
@@ -48,6 +47,26 @@ map <leader>ew :e ...
 map <leader>ew :sp ...
 map <leader>ew :vsp ...
 map <leader>et :tabe ...
+
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+"Tab movement
+nmap <leader>o :tabn<CR>
+nmap <leader>p :tabp <CR>
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+nmap gV `[v`]
+
+
+"Powerline fix
+"Source code pro fixed
+
 
 "-----------------End of Keybindings---------------------"
 "--------------Internal settings-----------"
@@ -88,9 +107,6 @@ set listchars=tab:▸\ ,eol:¬
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
-
-"fancy
-"let g:Powerline_symbols = 'fancy'
 
 "Undo settings
 set undodir=~/.vimundo

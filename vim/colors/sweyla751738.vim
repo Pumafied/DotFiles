@@ -14,6 +14,8 @@ set t_Co=256
 
 let colors_name = "sweyla751738"
 
+set listchars=tab:▸\ ,eol:¬
+
 if version >= 700
   hi CursorLine     guibg=#000000 ctermbg=16
   hi CursorColumn   guibg=#000000 ctermbg=16
