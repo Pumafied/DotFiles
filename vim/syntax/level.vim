@@ -1,4 +1,4 @@
-let b:current_sytax = "json"
+let b:current_sytax = "level"
 
 syn match 0 '0'
 syn match 1 '1'
