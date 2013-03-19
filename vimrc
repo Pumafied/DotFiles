@@ -48,7 +48,7 @@ map <leader>ew :sp ...
 map <leader>ew :vsp ...
 map <leader>et :tabe ...
 
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>v :vsp $MYVIMRC<CR>
 
 "Tab movement
 nmap <leader>o :tabn<CR>
@@ -62,10 +62,6 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 nmap gV `[v`]
-
-
-"Powerline fix
-"Source code pro fixed
 
 
 "-----------------End of Keybindings---------------------"
@@ -90,7 +86,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-"Auto writes all when focues is lost
+"Auto writes all when focus is lost
 autocmd BufLeave,FocusLost * silent! wall
 
 "Removes compatibility with vi
@@ -101,20 +97,16 @@ set backspace=indent,eol,start
 
 "----------End Internal Settings----------"
 "----------UI settings---------------"
-"
 
-" error bells
-set noerrorbells
-set visualbell
-set t_vb=
-set tm=500
 
+"Sets the language to US English
+set spelllang=en_us
 
 set nofoldenable
 set listchars=tab:▸\ ,eol:¬
 
 set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
+set guioptions-=T  "remove tool bar
 set guioptions-=r  "remove right-hand scroll bar
 
 "Undo settings
