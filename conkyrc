@@ -1,70 +1,103 @@
-xftfont DejaVu Sans Mono:pixelsize=20
+# Conkyrc by Hund @ ebupof.deviantart.com
+# Sry for the chaos below, but atleast it works! ;)
+
+background no
+xftfont Terminus:size=8
 xftalpha 0.8
-text_buffer_size 2048
-update_interval 1.0
+update_interval 3.0
 total_run_times 0
+own_window no
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
+minimum_size 220 5
+maximum_width 300
 draw_shades no
 draw_outline no
 draw_borders no
-draw_graph_borders no
-stippled_borders 0
-border_margin 1
-default_color D0D0D0
-own_window_colour black
-alignment top_right 
+draw_graph_borders yes
+default_color white
+default_shade_color black
+alignment top_right
+gap_x 12
+gap_y 35
 no_buffers yes
-uppercase no
-cpu_avg_samples 1
-net_avg_samples 1
-# own window options
-own_window yes
-own_window_type desktop
-#own_window_hints undecorated,skip_taskbar,sticky
-own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
+cpu_avg_samples 2
+override_utf8_locale no
+uppercase yes
 
 TEXT
-${alignc}#! System
-$nodename${alignr 4}$sysname $machine
-$alignc$kernel
-UpTime: ${alignr 4}$uptime_short
-Power: ${alignr 2}
-Capacity: ${battery_bar 5,35 BAT0}${alignr 4}$battery_percent%
-Time left:${alignr 2}$battery_time
+$stippled_hr
+$nodename - $sysname $kernel ($machine)
+$stippled_hr
+
+Kernel: $alignr $kernel
+Uptime: $alignr $uptime
+
+$stippled_hr
+SYSTEM
+$stippled_hr
+
+CPU1: ${alignr} ${cpu cpu1}%
+${cpugraph 20}
+Load: $alignr $loadavg
+Processes: $alignr $processes
+Running: $alignr $running_processes
+
+RAM: $alignr $mem/$memmax
+${membar 3}
+Swap: $alignr $swap / $swapmax
+${swapbar 3}
+
+$stippled_hr
+TOP
+$stippled_hr
 
 
-${alignc}#! Disks
-Hdd: ${fs_used_perc /} % ${alignr 4}${fs_bar 5,45 /}
-Ram: $memperc % ${alignr 4}${membar 5,45}
-Swap: $swapperc % ${alignr 4}${swapbar 5,45}
-I/O: ${alignr 4}$diskio
-${alignc}${diskiograph 10,90}
-${alignc}${loadgraph 10,90}
+Name $alignr PID     CPU%   MEM%
+${color #ddaa00} ${top name 1} $alignr ${top pid 1} ${top cpu 1} ${top mem 1}$color
+ ${top name 2} $alignr ${top pid 2} ${top cpu 2} ${top mem 2}
 
-${alignc}#! Net
-${if_existing /proc/net/route eth0}$alignc Wired Connection
-IP:${alignr 4}${addr eth0}
-Up:${alignr 4}${upspeed eth0}k/s
-${alignc}${upspeedgraph eth0 10,85}
-Down:${alignr 4}${downspeed eth0}k/s
-${alignc}${downspeedgraph eth0 10,85}
-${else}${alignc}NetWork
-${alignc}Wire Disconnected 
-${endif}
+Mem usage$color
+${color #ddaa00} ${top_mem name 1} $alignr ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}$color
+ ${top_mem name 2} $alignr ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
 
-${if_existing /proc/net/route wlan0}$alignc Wireless Connection
-IP:${alignr 4}${addr wlan0}
-Up:${alignr 4}${upspeed wlan0}k/s
-${alignc}${upspeedgraph wlan0 10,85}
-Down:${alignr 4}${downspeed wlan0}k/s
-${alignc}${downspeedgraph wlan0 10,85}
-${else}${alignc}NetWork
-${alignc}Wireless Disconnected
-${endif}
+$stippled_hr
+Temp
+$stippled_hr
 
 
-#ADD heroku status command output
-#ADD Heroku Getan ps
-#ADD 
+$stippled_hr
+HDD
+$stippled_hr
 
+I/O:
 
+ Write: $alignr $diskio_write
+${diskiograph_write 20}
+ Read: $alignr $diskio_read
+${diskiograph_read 20}
+
+ROOT: $alignr ${fs_free /} / ${fs_size /}
+${fs_bar 3 /}
+HOME: $alignr ${fs_free /home} / ${fs_size /home}
+${fs_bar 3 /home}
+HDD1: $alignr ${fs_free /media/HDD1} / ${fs_size /media/HDD1}
+${fs_bar 3 /media/HDD1}
+
+$stippled_hr
+Network
+$stippled_hr
+
+Down:
+${color #ddaa00} Speed: $alignr ${downspeed eth0} k/s$color
+ Tot: $alignr ${totaldown eth0}
+
+${downspeedgraph eth0 20} ${alignr}${upspeedgraph eth0 20}
+
+Up:
+${color #ddaa00} Speed: $alignr ${upspeed eth0} k/s$color
+ Tot: $alignr ${totalup eth0}
+
+${upspeedgraph eth0 20} ${alignr}${upspeedgraph eth0 20}
