@@ -9,33 +9,14 @@ require("naughty")
 
 -- Load Debian menu entries
 require("debian.menu")
-vicious = require("vicious")
 
--- Error handling
+-- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "You done fucked up!",
+                     title = "Oops, there were errors during startup!",
                      text = awesome.startup_errors })
-end
-
--- Prepare the container that is used when constructing the wibox
-local delightful_container = { widgets = {}, icons = {} }
-if install_delightful then
-    for _, widget in pairs(awful.util.table.reverse(install_delightful)) do
-        local config = delightful_config and delightful_config[widget]
-        local widgets, icons = widget:load(config)
-        if widgets then
-            if not icons then
-                icons = {}
-            end
-            table.insert(delightful_container.widgets, awful.util.table.reverse(
-widgets))
-            table.insert(delightful_container.icons,   awful.util.table.reverse(
-icons))
-        end
-    end
 end
 
 -- Handle runtime errors after startup
@@ -52,7 +33,9 @@ do
         in_error = false
     end)
 end
---Variable definitions
+-- }}}
+
+-- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
@@ -60,12 +43,14 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 terminal = "xterm"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
@@ -82,21 +67,18 @@ layouts =
     awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier
 }
- -- {{{ Tags
- -- Define a tag table which will hold all screen tags.
- tags = {
-   names  = { "Main", "Web", "GIMP", "Coms", "RemoteMon", "Overflow"},
-   layout = { layouts[2], layouts[2], layouts[2], layouts[2], layouts[2],
-              layouts[2], layouts[2], layouts[2], layouts[2]
- }}
- for s = 1, screen.count() do
-     -- Each screen has its own tag table.
-     tags[s] = awful.tag(tags.names, s, tags.layout)
- end
- -- }}}
+-- }}}
 
+-- {{{ Tags
+-- Define a tag table which hold all screen tags.
+tags = {}
+for s = 1, screen.count() do
+    -- Each screen has its own tag table.
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+end
+-- }}}
 
--- Menu
+-- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
@@ -104,62 +86,20 @@ myawesomemenu = {
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
-Favorites = {
-   { "Monogo", terminal .. "mongo" },
-   { "GIMP", gimp},
-   { "Firefox",firefox },
-}
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Debian", debian.menu.Debian_menu.Debian },
-                                    { "open terminal", terminal },
-				    { "Favorites", Favorites }
+                                    { "open terminal", terminal }
                                   }
                         })
 
 mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
                                      menu = mymainmenu })
--- Wibox
+-- }}}
+
+-- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
-
--- Initialize widget
-mpdwidget = widget({ type = "textbox" })
--- Register widget
-vicious.register(mpdwidget, vicious.widgets.mpd,
-    function (widget, args)
-        if args["{state}"] == "Stop" then
-            return " - "
-        else
-            return args["{Artist}"]..' - '.. args["{Title}"]
-        end
-    end, 10)
-
--- Initialize widget
-
-memwidget = awful.widget.progressbar({ align = "right" })
--- Progressbar properties
-memwidget:set_width(8)
-memwidget:set_height(10)
-memwidget:set_vertical(true)
-memwidget:set_background_color("#494B4F")
-memwidget:set_border_color(nil)
-memwidget:set_color("#AECF96")
-memwidget:set_gradient_colors({ "#AECF96", "#88A175", "#FF5656" })
--- Register widget
-vicious.register(memwidget, vicious.widgets.mem, "$1", 13)
-
-
--- Initialize widget
-cpuwidget = awful.widget.graph({ align = "right" })
--- Graph properties
-cpuwidget:set_width(50)
-cpuwidget:set_background_color("#494B4F")
-cpuwidget:set_color("#FF5656")
-cpuwidget:set_gradient_colors({ "#FF5656", "#88A175", "#AECF96" })
--- Register widget
-vicious.register(cpuwidget, vicious.widgets.cpu, "$1")
-
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
@@ -239,11 +179,8 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s],
-        s == 1 and mysystray or nil,
         mytextclock,
-        cpuwidget,
-        mpdwidget,
-        memwidget,
+        s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
@@ -260,19 +197,15 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    --Moves to the left workspace within monitor
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
-    --Moves to the right workspace within the monitor
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
-    --Moves to the last tag (workspace
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
-    --Rotates focus up
+
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
             if client.focus then client.focus:raise() end
         end),
-    --Rotates focus down
     awful.key({ modkey,           }, "k",
         function ()
             awful.client.focus.byidx(-1)
@@ -407,8 +340,8 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-     { rule = { class = "Firefox" },
-       properties = { tag = tags[1][2] } },
+    -- { rule = { class = "Firefox" },
+    --   properties = { tag = tags[1][2] } },
 }
 -- }}}
 
@@ -442,16 +375,3 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
--- Autorun programs
-autorun = true
-autorunApps =
-{
-   "gnome-sound-applet",
---   "nm-applet",
-   "conky",
-}
-if autorun then
-   for app = 1, #autorunApps do
-       awful.util.spawn(autorunApps[app])
-   end
-end

@@ -17,6 +17,9 @@ alias ll="ls -lFh --color=auto"
 alias dual="sh ~/DotFiles/scripts/dualMonitor.sh"
 alias one="sh ~/DotFiles/scripts/oneMonitor.sh"
 
+#This allows me to see the time of entered command by default
+alias history="history -E"
+
 #allows for easy editing of aliases
 alias aliases="vim ~/DotFiles/zsh/lib/aliases.zsh"
 

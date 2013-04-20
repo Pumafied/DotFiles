@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.level setfiletype level
+au BufRead,BufNewFile *.json setfiletype json
