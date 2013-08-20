@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/pumafied/DotFiles/vimnick/vim.symlink'
-let g:netrw_dirhist_2='/home/pumafied/DotFiles/vimnick/vim.symlink/colors'
-let g:netrw_dirhist_3='/home/pumafied/tmux-powerline'
-let g:netrw_dirhist_4='/home/pumafied/Documents/Email-LAN-IP'
-let g:netrw_dirhist_5='/home/pumafied/Documents/APCOMPSCI/workspace/Calculator/src'
-let g:netrw_dirhist_6='/home/pumafied/DotFiles/vim'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/pumafied/DotFiles/zsh/lib'
+let g:netrw_dirhist_2='/Users/pumafied/DotFiles/zsh'
+let g:netrw_dirhist_3='/Users/pumafied/Documents'
+let g:netrw_dirhist_4='/Users/pumafied/Library/LaunchAgents'
+let g:netrw_dirhist_5='/Users/pumafied/Documents/code'
+let g:netrw_dirhist_6='/Volumes/Bio'
+let g:netrw_dirhist_7='/Users/pumafied/.vim'
+let g:netrw_dirhist_8='/Users/pumafied/DotFiles/zsh/functions'

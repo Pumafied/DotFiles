@@ -1,18 +1,11 @@
 # reload zsh config
 alias reload!='source ~/.zshrc'
 
-alias eclimd= "sh ~/.eclipse/org.eclipse.platform_3.7.0_155965261/eclimd"
-
 # Filesystem aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-alias ls="ls --color=auto"
-alias l="ls -lah --color=auto"
-alias la="ls -AF --color=auto"
-alias ll="ls -lFh --color=auto"
 
 alias dual="sh ~/DotFiles/scripts/dualMonitor.sh"
 alias one="sh ~/DotFiles/scripts/oneMonitor.sh"
@@ -23,7 +16,6 @@ alias history="history -E"
 #allows for easy editing of aliases
 alias aliases="vim ~/DotFiles/zsh/lib/aliases.zsh"
 
-#simply for convience
 alias py="python"
 
 alias rmf="rm -rf"
@@ -47,9 +39,9 @@ alias rake="noglob rake"
 
 #Commented out for lack of a mac
 # Applications
-#alias mou='open -a Mou.app'
-#alias mark='open -a Marked.app'
-#alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+alias mou='open -a Mou.app'
+alias mark='open -a Marked.app'
+alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # be nice
 alias please=sudo
@@ -74,12 +66,12 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # removed for lack of a mackkk
-#alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
 #Disabled for lack of mac
 # Hide/show all desktop icons (useful when presenting)
-#alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-#alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do

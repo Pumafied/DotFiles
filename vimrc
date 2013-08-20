@@ -6,6 +6,9 @@ filetype plugin on
 "Enables mouse support
 set mouse =a
 
+"hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+
 "-------------Key Bindings---------------"
 
 "Sets the leader char to comma
@@ -37,6 +40,9 @@ nmap <leader>ww :topleft  new<CR>
 nmap <leader>ss :botright new<CR>
 "Zen coding expand key
 let g:user_zen_expandabbr_key = '<c-e>'
+
+set cursorline "BAM fuck you ben
+
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -70,22 +76,26 @@ nmap gV `[v`]
 "Turns on syntax highlighting
 sy on
 
-"Sets no back to remove annoying backup files
-set nobackup
-set noswapfile
-
 "Change history to 1000
 set history=10000
 
 set hidden
 
-"Tab control
-set smarttab
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+"set directory=~/.vim/swap
+"set backupdir=~/.vim/backup
 
+
+set shortmess=aTItoO
+
+
+"Tab control
+"set smarttab
+"set expandtab
+"set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+
+set noexpandtab
 "Auto writes all when focus is lost
 autocmd BufLeave,FocusLost * silent! wall
 
