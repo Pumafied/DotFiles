@@ -1,10 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/pumafied/DotFiles/zsh/lib'
-let g:netrw_dirhist_2='/Users/pumafied/DotFiles/zsh'
-let g:netrw_dirhist_3='/Users/pumafied/Documents'
-let g:netrw_dirhist_4='/Users/pumafied/Library/LaunchAgents'
-let g:netrw_dirhist_5='/Users/pumafied/Documents/code'
-let g:netrw_dirhist_6='/Volumes/Bio'
-let g:netrw_dirhist_7='/Users/pumafied/.vim'
-let g:netrw_dirhist_8='/Users/pumafied/DotFiles/zsh/functions'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/pumafied/pytest-osxnotify/pytest_osxnotify'

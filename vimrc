@@ -1,12 +1,7 @@
 call pathogen#infect()
-colorscheme sweyla751738
-
-filetype plugin on
 
 "Enables mouse support
 set mouse =a
-
-"hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 
 "-------------Key Bindings---------------"
@@ -17,7 +12,7 @@ let mapleader = ","
 "edit ~/.vimrc
 map <leader>e :e! ~/.vimrc<cr>
 
-"Write a file with sudo privledges
+"Write a file with sudo privledges after having opened the file without them
 cmap w!! w !sudo tee % >/dev/null
 
 "Toggles wrapping
@@ -41,14 +36,15 @@ nmap <leader>ss :botright new<CR>
 "Zen coding expand key
 let g:user_zen_expandabbr_key = '<c-e>'
 
-set cursorline "BAM fuck you ben
 
-
+"Allows for moving across splits easily
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+"map <C-a> <esc>
+"
 map <leader>ew :e ...
 map <leader>ew :sp ...
 map <leader>ew :vsp ...
@@ -89,9 +85,9 @@ set shortmess=aTItoO
 
 
 "Tab control
-"set smarttab
-"set expandtab
-"set shiftwidth=4
+set smarttab
+set expandtab
+set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 
@@ -112,7 +108,22 @@ set backspace=indent,eol,start
 "Sets the language to US English
 set spelllang=en_us
 
+"Solorized settings
+syntax enable
+set background=dark
+colorscheme solarized
+set cursorline
+
+"This colors your curently active line for reading. Not necessary if you use
+"solorazied
+"hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+"Old theme
+"colorscheme sweyla751738
+
+"Removes the ability to fold over code
 set nofoldenable
+"Makes invisible characters easier to see
 set listchars=tab:▸\ ,eol:¬
 
 set guioptions-=m  "remove menu bar
@@ -150,7 +161,8 @@ set wildmenu
 set nolazyredraw " don't redraw while executing macros
 
 set laststatus=2 " show the status line all the time
-"Auto strips trailing white spaces
+
+"Auto strips trailing white spaces on write
 if has("autocmd")
     autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 endif
@@ -168,3 +180,4 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
+
