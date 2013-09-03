@@ -14,6 +14,7 @@ git_bundles = [
   "https://github.com/scrooloose/nerdcommenter.git",
   "https://github.com/cakebaker/scss-syntax.vim.git",
   #"https://github.com/tpope/vim-surround.git",
+	"git://github.com/altercation/vim-colors-solarized.git",
   "https://github.com/sjl/gundo",
   "https://github.com/tpope/vim-ragtag.git",
   "https://github.com/tpope/vim-vividchalk.git",
