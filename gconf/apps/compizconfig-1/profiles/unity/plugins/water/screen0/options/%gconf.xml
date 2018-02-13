@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="toggle_rain_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/water/screen0/options/toggle_rain_key"/>
-	<entry name="offset_scale" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/water/screen0/options/offset_scale"/>
-	<entry name="title_wave" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/water/screen0/options/title_wave"/>
-	<entry name="rain_delay" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/water/screen0/options/rain_delay"/>
-	<entry name="initiate_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/water/screen0/options/initiate_key"/>
-	<entry name="toggle_wiper_key" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/water/screen0/options/toggle_wiper_key"/>
-</gconf>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="alpha" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/unitydialog/screen0/options/alpha"/>
-	<entry name="fade_time" mtime="1350417920" schema="/schemas/apps/compiz-1/plugins/unitydialog/screen0/options/fade_time"/>
-</gconf>

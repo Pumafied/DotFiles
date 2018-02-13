@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="constrain_y" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/move/screen0/options/constrain_y" type="bool" value="true"/>
-	<entry name="initiate_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/move/screen0/options/initiate_button"/>
-	<entry name="snapoff_maximized" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/move/screen0/options/snapoff_maximized"/>
-	<entry name="opacity" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/move/screen0/options/opacity"/>
-	<entry name="initiate_key" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/move/screen0/options/initiate_key"/>
-	<entry name="lazy_positioning" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/move/screen0/options/lazy_positioning"/>
-</gconf>

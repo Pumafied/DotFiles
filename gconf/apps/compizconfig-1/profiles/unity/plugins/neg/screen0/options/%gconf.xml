@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="window_toggle_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/neg/screen0/options/window_toggle_key"/>
-	<entry name="screen_toggle_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/neg/screen0/options/screen_toggle_key"/>
-	<entry name="neg_match" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/neg/screen0/options/neg_match"/>
-	<entry name="neg_decorations" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/neg/screen0/options/neg_decorations"/>
-	<entry name="exclude_match" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/neg/screen0/options/exclude_match"/>
-</gconf>

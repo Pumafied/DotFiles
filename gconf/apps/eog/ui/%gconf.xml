@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="statusbar" mtime="1350686595" type="bool" value="true"/>
-	<entry name="toolbar" mtime="1350686595" type="bool" value="true"/>
-	<entry name="sidebar" mtime="1350686585" type="bool" value="false"/>
-	<entry name="image_collection" mtime="1350686585" type="bool" value="false"/>
-</gconf>

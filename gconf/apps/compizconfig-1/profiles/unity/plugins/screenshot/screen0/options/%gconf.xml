@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="launch_app" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/screenshot/screen0/options/launch_app"/>
-	<entry name="initiate_button" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/screenshot/screen0/options/initiate_button"/>
-	<entry name="directory" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/screenshot/screen0/options/directory"/>
-</gconf>

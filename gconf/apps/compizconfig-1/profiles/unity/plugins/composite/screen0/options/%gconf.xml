@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="force_independent_output_painting" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/composite/screen0/options/force_independent_output_painting"/>
-	<entry name="detect_refresh_rate" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/composite/screen0/options/detect_refresh_rate"/>
-	<entry name="unredirect_fullscreen_windows" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/composite/screen0/options/unredirect_fullscreen_windows"/>
-	<entry name="refresh_rate" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/composite/screen0/options/refresh_rate"/>
-	<entry name="slow_animations_key" mtime="1350417923" schema="/schemas/apps/compiz-1/plugins/composite/screen0/options/slow_animations_key"/>
-</gconf>

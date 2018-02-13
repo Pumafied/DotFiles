@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="slide_out_duration" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/kdecompat/screen0/options/slide_out_duration"/>
-	<entry name="sliding_popups" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/kdecompat/screen0/options/sliding_popups"/>
-	<entry name="window_blur" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/kdecompat/screen0/options/window_blur"/>
-	<entry name="plasma_thumbnails" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/kdecompat/screen0/options/plasma_thumbnails"/>
-	<entry name="slide_in_duration" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/kdecompat/screen0/options/slide_in_duration"/>
-	<entry name="present_windows" mtime="1350417922" schema="/schemas/apps/compiz-1/plugins/kdecompat/screen0/options/present_windows"/>
-</gconf>
