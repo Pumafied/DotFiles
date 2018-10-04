@@ -77,65 +77,122 @@ def request_cont(variable, model):
 
 
 
-"""
 test_variables = ["username","password","date","description"]
 test_kinds = ["string","string","date","boolean"]
 test_isinit = [True,True,False,True]
+"""
 print(gen_model_main("User", "users", test_variables, test_kinds, test_isinit))
 """
-
-# Auto gen model helper
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# --------------------------- Gen HTML ----------------------------
 # Auto gen 3 route types Html
-# Auto gen 3 route types python
+# Types of data, text area, text label, file, checkbox
+# Disregard the kinds for now
+# Warning this doest change the button properly
+# Eventually colors should be modifiable from this
+def add_item(model_name, variables, kinds):
+	#Do actual changes here
+	generated_string = ""
+	generated_string += head_backend(model_name)
+	for variable in variables:
+		generated_string += """
+						<div class="input-field col s9 offset-s1">
+							<input name="{0}" id="{0}" type="text" value="{{{{{0}}}}}">
+							<label for="{0}">{0}</label>
+						</div>""".format(variable)
+
+	generated_string += tail_backend()
+
+	return generated_string
+
+# Head Stuff
+def head_backend(model_name):
+	generated_string = """
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<title>Add {0}</title>
+	<body>
+		{{% include 'nav.html' %}}
+
+		<div class="container">
+			<div class="row">
+				<div class="col s8 offset-s2 box">
+					<h3>Add {0}</h3>
+					<p>{{{{status}}}}
+					</p>
+					<form method="post" action="#">
+""".format(model_name)
+	return generated_string
 
 
+# Tail Stuff
+def tail_backend():
+	generated_string = """
+						<center><input class="waves-effect waves-light btn" type="submit" value="Add name"></center>
+					</form>
+				</div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</body>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript" src="/js/materialize.min.js"></script>
+	<script>
+		$( document ).ready(function(){
+			$(".button-collapse").sideNav();
+		})
+
+	</script>
+	{{% include 'activate.html' %}}
+</html>
+"""
+	return generated_string
+
+# this deals with editing of a particular model
+# Item name is the name of the variable that is being passed from flask
+def edit_item(model_name, variables, kinds, item_name):
+	#Do actual changes here
+	generated_string = ""
+	generated_string += head_backend(model_name)
+	for variable in variables:
+		generated_string += """
+						<div class="input-field col s9 offset-s1">
+							<input name="{0}" id="{0}" type="text" value="{{{{{1}.{0}}}}}">
+							<label for="{0}">{0}</label>
+						</div>""".format(variable, item_name)
+
+	generated_string += tail_backend()
+
+	return generated_string
 
 
+# --------------------------- End Gen HTML ----------------------------
+# --------------------------- Generate Routes for application.py ----------------------------
+def add_item_route():
+	generated_string =""
+	# Do header info
+	# Do post inormation
+	# Do template return
+
+	return generated_string
 
 
+# --------------------------- End Generate Routes for application.py ----------------------------
 
+# Gen Nav
+# Auto gen model helper
+# Auto gen route types python
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(edit_item("User", test_variables, "","current_album"))
