@@ -210,7 +210,7 @@ def edit_{0}():
 
 # This handles the edit route for the item
 # this handler will be less than perfect if the person fails the check the data will be reset
-def add_item_route(current_item, variables, model_name):
+def add_item_route(current_item, variables):
 	generated_string =""
 	generated_string = """
 @app.route('/add_{0}', methods=['GET','POST'])
@@ -219,7 +219,7 @@ def add_item_route(current_item, variables, model_name):
 def add_{0}():
 	status = ''
 	if request.method == 'POST':
-""".format(current_item, model_name)
+""".format(current_item)
 
 	# Need to make sure this goes to the right indent level
 	generated_string += "\n\t\t# Grab data from form\n"
@@ -227,21 +227,18 @@ def add_{0}():
 		generated_string += "\t\t" + request(variable)
 	generated_string += "\n\t\t# Create Object\n"
 
+	generated_string += "\t\tnew_{0} = create_{0}(".format(current_item)
+	#TODO: Change this to use only the ones that are going to be in the init
+	for variable in variables:
+		generated_string += variable
+		if variable != len(variables) - 1:
+			generated_string += ", "
 
-
-	generated_string += "\n\t\t# Create Object\n"
-
+	generated_string += ")\n"
 
 	# TODO: add the redirect
 	# Do template return
 	generated_string += "\treturn render_template('name.html', status=status)\n"
-
-	return generated_string
-	# Do header info
-	# Do post inormation
-	# Do template return
-
-	# Do checks on the blanks for everything. You can edit this out manually
 
 	return generated_string
 
@@ -253,4 +250,5 @@ def add_{0}():
 # Auto gen route types python
 
 # print(edit_item("User", test_variables, "","current_album"))
-print(edit_item_route("current", test_variables, "User"))
+# print(edit_item_route("current", test_variables, "User"))
+print(add_item_route("user", test_variables))
