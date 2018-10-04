@@ -180,11 +180,68 @@ def edit_item(model_name, variables, kinds, item_name):
 
 # --------------------------- End Gen HTML ----------------------------
 # --------------------------- Generate Routes for application.py ----------------------------
-def add_item_route():
+# This handles creating a new instance of the object
+def edit_item_route(current_item, variables, model_name):
+	# Do header info
+	# do object editing
+	generated_string = """
+@app.route('/edit_{0}/<int:current>', methods=['GET','POST'])
+@login_required
+def edit_{0}():
+	status = ''
+	{0} = {1}.query.get(current)
+	if request.method == 'POST':
+""".format(current_item, model_name)
+
+	# Need to make sure this goes to the right indent level
+	generated_string += "\n\t\t# Grab data from form\n"
+	for variable in variables:
+		generated_string += "\t\t" + request(variable)
+	generated_string += "\n\t\t# Update Object\n"
+	for variable in variables:
+		generated_string += "\t\t" + request_cont(variable, current_item)
+	# Session commit
+	generated_string += "\t\tdb.session.commit()\n"
+	# TODO: add the redirect
+	# Do template return
+	generated_string += "\treturn render_template('name.html', status=status)\n"
+
+	return generated_string
+
+# This handles the edit route for the item
+# this handler will be less than perfect if the person fails the check the data will be reset
+def add_item_route(current_item, variables, model_name):
 	generated_string =""
+	generated_string = """
+@app.route('/add_{0}', methods=['GET','POST'])
+@app.route('/add_{0}.html', methods=['GET','POST'])
+@login_required
+def add_{0}():
+	status = ''
+	if request.method == 'POST':
+""".format(current_item, model_name)
+
+	# Need to make sure this goes to the right indent level
+	generated_string += "\n\t\t# Grab data from form\n"
+	for variable in variables:
+		generated_string += "\t\t" + request(variable)
+	generated_string += "\n\t\t# Create Object\n"
+
+
+
+	generated_string += "\n\t\t# Create Object\n"
+
+
+	# TODO: add the redirect
+	# Do template return
+	generated_string += "\treturn render_template('name.html', status=status)\n"
+
+	return generated_string
 	# Do header info
 	# Do post inormation
 	# Do template return
+
+	# Do checks on the blanks for everything. You can edit this out manually
 
 	return generated_string
 
@@ -195,4 +252,5 @@ def add_item_route():
 # Auto gen model helper
 # Auto gen route types python
 
-print(edit_item("User", test_variables, "","current_album"))
+# print(edit_item("User", test_variables, "","current_album"))
+print(edit_item_route("current", test_variables, "User"))
