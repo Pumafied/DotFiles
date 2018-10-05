@@ -1,8 +1,22 @@
 
+
+
+# Model CSV
+# variable, kind, isinit
+# Route CSV
+# class, create, edit, delete
+
+
+
+
+
+
+
+
 # ------------------------ Model Helpers ------------------------
 
 # Generates each individual class Indent still off by one
-def gen_model_main(model,table,names, kinds, isinit):
+def gen_model_main(model, table, names, kinds, isinit):
 	# Generate the header information for the class
 	generated_string = """
 class {0}(db.Model):\n\t__tablename__ = '{1}'\n\n\t#  ---Data---\n""".format(model, table)
@@ -243,12 +257,202 @@ def add_{0}():
 	return generated_string
 
 
+#TODO: List Items Stub
+def list_items():
+	generated_string = ""
+	return generated_string
+
+
+def delete_item_route(current_name,model_name):
+	generated_string = ""
+"""
+@app.route('/confirm_delete/<int:current>', methods=['GET','POST'])
+@login_required
+def confirm_delete_{1}(current=''):
+	status = ''
+	{1}= {0}.query.get(current)
+	db.session.delete({1})
+	db.session.commit()
+
+	return redirect('/name')
+""".format(current_name, model_name)
+	return generated_string
+
+# generates the route for application.py to ensure they mean to delete the item
+def delete_item_confirm_route():
+	generated_string = """
+@app.route('/delete/<int:band_id>', methods=['GET','POST'])
+@login_required
+def delete_{}(band_id=''):
+	status = ''
+	{0} = {0}.query.get(band_id)
+
+	return render_template("{1}.html")
+""".format(current_item, current_model)
+	return generated_string
+
+
+# Generates the confirm delete html template
+# TODO: This
+def delete_item_confirm_html():
+	generated_string = ""
+	# Head
+
+	# Main
+	# Tail
+	return generated_string
+
+
+
 # --------------------------- End Generate Routes for application.py ----------------------------
 
-# Gen Nav
-# Auto gen model helper
-# Auto gen route types python
+# TODO: Gen delete confirm
+# TODO: Gen delete confirm HTML
+# TODO: Gen delete route
+# TODO: Gen Nav
+# TODO: Auto gen model helper
+# TODO: Auto gen route types python
+# TODO: Runner Model
+# TODO: Runner Routes
+# TODO: Runner Model Helpers
+# TODO: Full Run from CSV
+# TODO: Generate WSGI
+# TODO: Auto run env
+# TODO: gen logout
+# TODO: gen login
 
-# print(edit_item("User", test_variables, "","current_album"))
-# print(edit_item_route("current", test_variables, "User"))
-print(add_item_route("user", test_variables))
+def gen_app():
+	# Generate Heading stub
+	generated_string = app_head()
+	#TODO: Gen Routes management
+
+	generated_string = app_mid()
+	# Gen Model
+
+
+	# End Stuff
+	generated_string = app_tail()
+	return generated_string
+
+def app_mid():
+	generate_string = """
+
+# Login
+@app.route('/login', methods=['GET','POST'])
+@app.route('/login.html', methods=['GET','POST'])
+@app.route('/signin', methods=['GET','POST'])
+@app.route('/signin.html', methods=['GET','POST'])
+def login():
+	if request.method == 'GET' :
+		return render_template('login.html')
+
+	# otherwise attempt to log in
+	email = request.form["email"]
+	password = request.form["password"]
+
+	user = User.query.filter_by(email=email).first()
+	if user != None :
+		if pbkdf2_sha256.verify(password, user.password) :
+			user.authenticated = True
+			db.session.commit()
+			login_user(user)
+			return redirect("/users")
+
+	status = "Incorrect Username or Password"
+	return render_template("login.html", status = status)
+
+
+@app.route('/logout.html', methods=['GET'])
+@app.route('/logout', methods=['GET'])
+@app.route('/signout.html', methods=['GET'])
+@app.route('/signout', methods=['GET'])
+def logout():
+	print("Called: logout")
+
+	logout_user()
+	return redirect("/")
+
+
+@loginmanager.user_loader
+def load_user(id):
+	users = User.query.filter_by(id=id)
+	login_user = users.first()
+	login_user.authenticated = True
+	db.session.commit()
+	return login_user
+
+"""
+	return generated_string
+
+def app_head():
+	generated_string = """
+# -*- coding: utf-8 -*-
+from flask import *
+from logging.handlers import RotatingFileHandler
+from flask_assets import Environment, Bundle
+from flask.ext.login import LoginManager, login_user, logout_user, current_user, login_required
+from passlib.hash import pbkdf2_sha256
+import logging
+from model import db, User, GlobalSettings, Band, Album, Contact
+import perform
+from flask_webpack import Webpack
+import os
+
+app = Flask(__name__)
+#TODO: The niceness if they fuck up on the add form
+#TODO: Confirm Deletes
+# current = model.Shift.query.filter_by(id=shift).first()
+
+loginmanager = LoginManager()
+loginmanager.init_app(app)
+loginmanager.login_view = '/'
+app.static_folder = 'static'
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///raven.db'
+
+app.config['DEBUG'] = True
+app.config['PROPAGATE_EXCEPTIONS'] = True
+app.config['TRAP_BAD_REQUEST_ERRORS'] = True
+db.app = app
+db.init_app(app)
+
+	company = Company.query.get(company)
+	company.poc_title = poc_title
+def allowed_file(filename):
+	return '.' in filename and \
+		filename.rsplit('.',  1)[1] in ALLOWED_EXTENSIONS
+
+# Taken out to remove the possibility of sending emails accidentally
+def send_async_email(app, msg):
+	with app.app_context():
+		mail.send(msg)
+"""
+	return generated_string
+
+
+def app_tail():
+	generated_string = """
+@app.route('/js/<remainder>', methods=['GET'])
+@app.route('/img/<remainder>', methods=['GET'])
+@app.route('/images/<remainder>', methods=['GET'])
+@app.route('/css/<remainder>', methods=['GET'])
+@app.route('/vendor/<remainder>', methods=['GET'])
+@app.route('/fonts/<remainder>', methods=['GET'])
+@app.route('/band_data/<remainder>', methods=['GET'])
+def get_static(remainder):
+	return send_from_directory(app.static_folder, request.path[1:])
+
+# Change before launch
+app.secret_key = "0446698678"
+
+# #  Example Logging
+if __name__ == "__main__":
+	handler = RotatingFileHandler('log.log', maxBytes=10000000, backupCount=1)
+	handler.setLevel(logging.INFO)
+	app.logger.addHandler(handler)
+	app.run(host="0.0.0.0", port=8080)
+
+"""
+	return generated_string
+
