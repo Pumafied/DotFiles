@@ -263,9 +263,8 @@ def list_items():
 	return generated_string
 
 
-def delete_item_route(current_name,model_name):
-	generated_string = ""
-"""
+def delete_item_route(current_name, model_name):
+	generated_string = """
 @app.route('/confirm_delete/<int:current>', methods=['GET','POST'])
 @login_required
 def confirm_delete_{1}(current=''):
@@ -279,7 +278,7 @@ def confirm_delete_{1}(current=''):
 	return generated_string
 
 # generates the route for application.py to ensure they mean to delete the item
-def delete_item_confirm_route():
+def delete_item_confirm_route(current_name, model_name):
 	generated_string = """
 @app.route('/delete/<int:band_id>', methods=['GET','POST'])
 @login_required
@@ -325,6 +324,15 @@ def gen_app():
 	# Generate Heading stub
 	generated_string = app_head()
 	#TODO: Gen Routes management
+	for route in routes:
+		# Kick to add
+		generated_string +=""
+		# Kick to edit
+		generated_string +=""
+		# Kick to delete confirm
+		generated_string +=""
+		# Kick to delete
+		generated_string +=""
 
 	generated_string = app_mid()
 	# Gen Model
@@ -334,6 +342,7 @@ def gen_app():
 	generated_string = app_tail()
 	return generated_string
 
+# Generates the login/logout routes
 def app_mid():
 	generate_string = """
 
@@ -384,6 +393,8 @@ def load_user(id):
 """
 	return generated_string
 
+
+# Generates the route for the head of application.py
 def app_head():
 	generated_string = """
 # -*- coding: utf-8 -*-
@@ -430,7 +441,7 @@ def send_async_email(app, msg):
 """
 	return generated_string
 
-
+# Generates all of the tail info for application.py
 def app_tail():
 	generated_string = """
 @app.route('/js/<remainder>', methods=['GET'])

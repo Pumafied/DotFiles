@@ -43,13 +43,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"map <C-a> <esc>
-"
-map <leader>ew :e ...
-map <leader>ew :sp ...
-map <leader>ew :vsp ...
-map <leader>et :tabe ...
-
+"Leader v to edit vimrc
 nmap <leader>v :vsp $MYVIMRC<CR>
 
 "Tab movement
@@ -77,8 +71,8 @@ set history=10000
 
 set hidden
 
-"set directory=~/.vim/swap
-"set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+set backupdir=~/.vim/backup
 
 
 set shortmess=aTItoO
@@ -114,16 +108,10 @@ set background=dark
 colorscheme solarized
 set cursorline
 
-"This colors your curently active line for reading. Not necessary if you use
-"solorazied
-"hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-
-"Old theme
-"colorscheme sweyla751738
-
 "Removes the ability to fold over code
 set nofoldenable
-"Makes invisible characters easier to see
+
+"Makes invisible characters more plesant to see
 set listchars=tab:▸\ ,eol:¬
 
 set guioptions-=m  "remove menu bar
