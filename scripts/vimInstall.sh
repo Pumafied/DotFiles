@@ -1,5 +1,5 @@
-cd ~/.vim/bundle
-git clone git://github.com/emmetio/emmet.git
-git clone git://github.com/scrooloose/nerdtree.git
-git clone git://github.com/Lokaltog/vim-powerline.git
-git clone git://github.com/skammer/vim-css-color.git 
+ mkdir ~/.vim
+ mkdir ~/.vim/swap
+ mkdir ~/.vim/backup
+ln -s /Users/pumafied/DotFiles/vim/ /Users/pumafied/.vim
+ln -s /Users/pumafied/DotFiles/vimrc /Users/pumafied/.vimrc
