@@ -2,13 +2,26 @@ call pathogen#infect()
 
 "Enables mouse support
 set mouse =a
+"Removes compatibility with vi
+set nocompatible
 
+" These may be combined for brevity (disabling both)
+filetype plugin indent off
+set list
+set tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab
+set ignorecase
+set smartcase
+
+"------------- Vim WIKI Key Bindings---------------"
+" For the Split Eventually add a split the other way
 
 "-------------Key Bindings---------------"
 
+set number
 "Sets the leader char to comma
 let mapleader = ","
-
+nmap <leader>l <Plug>VimwikiSplitLink
+set synmaxcol=0
 "edit ~/.vimrc
 map <leader>e :e! ~/.vimrc<cr>
 
@@ -21,8 +34,6 @@ nmap <F2> :set paste!<CR>
 nmap <F3> :NERDTreeToggle<CR>
 "Turns off the highlighting in the source
 nmap <F4> :set hlsearch!<CR>
-"Toggles text wrapping for use with large arrays
-nmap <F5> :set wrap!<CR>
 nmap <F6> :set list!<CR>
 nmap <F7> :set linebreak<CR>
 nmap <F9> :SyntasticToggleMode<CR>
@@ -31,7 +42,8 @@ nmap <F12> :set spell!<CR>
 "This makes vim splits easier to use
 nmap <leader>aa :topleft  vnew<CR>
 nmap <leader>dd :botright vnew<CR>
-nmap <leader>ww :topleft  new<CR>
+"Commented out so that I can use vim wiki
+"nmap <leader>ww :topleft  new<CR>
 nmap <leader>ss :botright new<CR>
 "Zen coding expand key
 let g:user_zen_expandabbr_key = '<c-e>'
@@ -43,7 +55,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"Leader v to edit vimrc
+"map <C-a> <esc>
+"
+map <leader>ew :e ...
+map <leader>ew :sp ...
+map <leader>ew :vsp ...
+map <leader>et :tabe ...
+
 nmap <leader>v :vsp $MYVIMRC<CR>
 
 "Tab movement
@@ -71,26 +89,24 @@ set history=10000
 
 set hidden
 
-set directory=~/.vim/swap
-set backupdir=~/.vim/backup
+"set directory=~/.vim/swap
+"set backupdir=~/.vim/backup
 
 
 set shortmess=aTItoO
 
 
 "Tab control
-set smarttab
-set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+"set smarttab
+"set expandtab
+"set shiftwidth=2
+"set tabstop=2
+"set softtabstop=2
 
-set noexpandtab
+"set noexpandtab
 "Auto writes all when focus is lost
 autocmd BufLeave,FocusLost * silent! wall
 
-"Removes compatibility with vi
-set nocompatible
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
@@ -108,10 +124,16 @@ set background=dark
 colorscheme solarized
 set cursorline
 
+"This colors your curently active line for reading. Not necessary if you use
+"solorazied
+"hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+"Old theme
+"colorscheme sweyla751738
+
 "Removes the ability to fold over code
 set nofoldenable
-
-"Makes invisible characters more plesant to see
+"Makes invisible characters easier to see
 set listchars=tab:▸\ ,eol:¬
 
 set guioptions-=m  "remove menu bar
