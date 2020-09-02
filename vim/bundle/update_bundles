@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+# script based on Tammer Saleh's blog post
+# http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+
+require 'fileutils'
+require 'open-uri'
+
+git_bundles = [
+  "https://github.com/tpope/vim-rake.git",
+  "https://github.com/tpope/vim-endwise.git",
+  "https://github.com/tpope/vim-fugitive.git",
+  #"https://github.com/scrooloose/syntastic.git",
+  "https://github.com/scrooloose/nerdcommenter.git",
+  "https://github.com/cakebaker/scss-syntax.vim.git",
+  #"https://github.com/tpope/vim-surround.git",
+	"git://github.com/altercation/vim-colors-solarized.git",
+  "https://github.com/sjl/gundo",
+  "https://github.com/tpope/vim-ragtag.git",
+  "https://github.com/tpope/vim-vividchalk.git",
+  "https://github.com/mmalecki/vim-node.js.git",
+  "https://github.com/pangloss/vim-javascript.git",
+  "https://github.com/tpope/vim-markdown.git",
+  "https://github.com/tpope/vim-cucumber.git",
+  "https://github.com/vim-ruby/vim-ruby.git",
+  "https://github.com/manalang/jshint.vim.git",
+  "https://github.com/kien/ctrlp.vim.git",
+  "https://github.com/scrooloose/nerdtree.git",
+  "https://github.com/vim-scripts/ZoomWin.git",
+  "https://github.com/rgarver/Kwbd.vim.git",
+  "https://github.com/Lokaltog/vim-powerline.git",
+  "https://github.com/Raimondi/delimitMate.git",
+  "https://github.com/goatslacker/mango.vim.git",
+  "https://github.com/marcus/vim-mustang",
+  "https://github.com/sjl/badwolf.git",
+  "https://github.com/groenewege/vim-less.git"
+]
+
+git_bundles.each do |url|
+  dir = url.split('/').last.sub(/\.git$/, '')
+  puts "unpacking #{url} #{dir}"
+  `git clone #{url} #{dir}`
+  #FileUtils.rm_rf File.join(dir, '.git')
+end
+puts "\nbundle installation complete\n"
