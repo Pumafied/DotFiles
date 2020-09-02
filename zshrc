@@ -1,7 +1,7 @@
 export ZSH=$HOME/DotFiles
-
-alias vim='nvim'
-alias vi='nvim'
+#TODO: Make it check for nvim
+#alias vim='nvim'
+#alias vi='nvim'
 alias lt='ls -tu'
 alias wat='git diff master'
 # Use this as uzi filename
