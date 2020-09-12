@@ -8,6 +8,23 @@ alias wat='git diff master'
 alias uzi='tar -zxvf'
 
 
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias mac_update='brew update && brew upgrade'
+
+# Go to chromebook shared thing
+alias shared='cd /mnt/chromeos/MyFiles/Downloads/'
+
+# Create the env
+alias create='virtualenv env && source env/bin/activate && pip3 -r requirements.txt'
+
+# source the env
+alias env ='source env/bin/activate'
+
+alias force ='rm -rf env/ && virtualenv env && source env/bin/activate && pip3 -r requirements.txt'
+
+
+
+#TODO:  create web stuff by default
 
 $(thefuck --alias)
 
