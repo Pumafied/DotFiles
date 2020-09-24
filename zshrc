@@ -1,12 +1,29 @@
 export ZSH=$HOME/DotFiles
 #TODO: Make it check for nvim
-#alias vim='nvim'
-#alias vi='nvim'
+
+
+"""
+alias vim='launchvim()'
+alias vi='launchvim()'
+
+
+launchvim() {
+	if !command -v nvim &> /dev/null
+	then
+			/usr/bin/vim
+	else
+			/user/bin/nvim
+
+	fi
+}
+"""
+
 alias lt='ls -tu'
 alias wat='git diff master'
+
 # Use this as uzi filename
 alias uzi='tar -zxvf'
-
+alias heic="magick mogrify -monitor -format jpg *.HEIC ; rm *.HEIC"
 
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias mac_update='brew update && brew upgrade'
@@ -18,10 +35,15 @@ alias shared='cd /mnt/chromeos/MyFiles/Downloads/'
 alias create='virtualenv env && source env/bin/activate && pip3 -r requirements.txt'
 
 # source the env
-alias env ='source env/bin/activate'
+alias env='source env/bin/activate'
 
-alias force ='rm -rf env/ && virtualenv env && source env/bin/activate && pip3 -r requirements.txt'
+alias force='rm -rf env/ && virtualenv env && source env/bin/activate && pip3 -r requirements.txt'
 
+# Check the status of the servers
+# Eventually i'd like it if once a ping is reciveved then it would switch to curl to check for apache
+alias checkl='ping lubkerdesign.com'
+alias checko='ping ownlend.com'
+alias checkm='ping omahametrolimo.com'
 
 
 #TODO:  create web stuff by default

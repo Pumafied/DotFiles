@@ -4,6 +4,7 @@
 # Set your environment variable git_token to your github one
 # make sure that the code dir exists
 
+# If there is no git token set then show a warning
 echo $git_token
 echo curl -H "Authorization: token $git_token" -s https://api.github.com/user/repos |grep ssh_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'
 
@@ -11,5 +12,5 @@ echo curl -H "Authorization: token $git_token" -s https://api.github.com/user/re
 
 for repo in `curl -H "Authorization: token $git_token" -s https://api.github.com/user/repos |grep ssh_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'`;do
   echo $repo
-  git clone $repo ~/code/;
+  git clone $repo ~/git_test/;
 done;
