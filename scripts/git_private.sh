@@ -5,12 +5,9 @@
 # make sure that the code dir exists
 
 # If there is no git token set then show a warning
-echo $git_token
-echo curl -H "Authorization: token $git_token" -s https://api.github.com/user/repos |grep ssh_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'
-
-#names = curl -H "Authorization: token $git_token" -s https://api.github.com/user/repos |grep ssh_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'
-
+#echo $git_token
+# Warning this has to be run from the dir that you want the code in
 for repo in `curl -H "Authorization: token $git_token" -s https://api.github.com/user/repos |grep ssh_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'`;do
   echo $repo
-  git clone $repo ~/git_test/;
+  git clone $repo;
 done;
