@@ -57,13 +57,11 @@ alias checkm='ping omahametrolimo.com'
 alias check10='ping 10menroofing.com'
 
 # ------ For Server Conections ---
-# Add title to the
+# Add title to the window
 # Mosh
-# --ssh=ssh -i filename
-alias lubker='mosh --ssh=ssh -i ~/.ssh/Asus.pem ubuntu@ec2-54-173-93-58.compute-1.amazonaws.com'
-alias lubker='mosh -i ~/.ssh/Asus.pem ubuntu@ec2-54-173-93-58.compute-1.amazonaws.com'
+alias lubker="mosh --ssh='ssh -i ~/.ssh/Asus.pem' ubuntu@ec2-54-173-93-58.compute-1.amazonaws.com"
 alias limo='mosh ubuntu@ec2-54-164-10-248.compute-1.amazonaws.com'
-alias brad='mosh -i ~/.ssh/ownlend.pem ubuntu@ec2-18-216-159-202.us-east-2.compute.amazonaws.com'
+alias brad="mosh --ssh='ssh -i ~/.ssh/ownlend.pem' ubuntu@ec2-18-216-159-202.us-east-2.compute.amazonaws.com"
 alias 9monkey='mosh ubuntu@3.135.201.130'
 
 # SSH
@@ -118,4 +116,4 @@ fi
 # See if this will even work
 #$(thefuck --alias)
 # this is the second the fuck
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
