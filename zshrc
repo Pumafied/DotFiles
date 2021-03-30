@@ -3,6 +3,42 @@ export PYTHONPATH="/Users/pumafied/usdpython/USD/lib/python:$PYTHONPATH"
 export PATH="/Users/pumafied/usdpython/USD:$PATH"
 export PATH="/Users/pumafied/usdpython/usdzconvert:$PATH"
 
+#Easy Password generator
+alias pass="curl https://www.dinopass.com/password/simple"
+
+# Ping Monitors
+alias plubker="gping lubkerdesign.com"
+alias p9monkey="gping 10menroofing.com"
+alias plimo="gping omahametrolimo.com"
+alias pbrad="gping ownlend.com"
+#2 is arcadia
+alias arcadia="ssh pumafied@192.168.0.2"
+#3 is pro
+alias book="ssh pumafied@192.168.0.3"
+#4 is imac
+alias imac="ssh pumafied@192.168.0.4"
+#
+alias takemehome="ssh -D 1234 pumafied@97.119.215.210"
+#
+#alias tunnel="ssh pumafied@j"
+#
+#Get your own public ip
+alias ip="curl ifconfig.co/"
+alias ip4="curl -4 ifconfig.co/"
+alias ip6="curl -6 ifconfig.co/"
+
+
+#Add a custom speed test here
+#brew tap teamookla/speedtest
+#brew update
+#brew install speedtest --force
+
+# Tail monitors
+
+# Curl update monitors
+#
+
+
 #TODO: Make it check for nvim
 #alias vim='launchvim()'
 #alias vi='launchvim()'
@@ -18,9 +54,23 @@ export PATH="/Users/pumafied/usdpython/usdzconvert:$PATH"
 # Make the util nice
 #TODO:  create web stuff by default
 
+# Stealth (slowest) TCP/UDP scan of 192.168.1.0/24 for first 1024 ports
+#nmap -sT -sU -T5 192.168.1.0/24 -p 1-1024
+
+# Find all open ports fir an ip Stealth
+# Find all open ports for an ip non-stealth
+#
+
+
+# Alias to scan the local network may need to be modified depending on you subnet settings
+#ifconfig nmap -sP 192.168.0.0/24
+
+
 # Aliases for easy cd'ing
 # Code
-alias code="cd ~/Documents/code"
+# TODO: Take hostname and go to right dir
+alias "'cd code'=~/Documents/code_book"
+alias code="cd ~/Documents/code_book"
 # Docs
 alias docs="cd ~/Documents"
 # Download
@@ -37,6 +87,10 @@ alias heic="magick mogrify -monitor -format jpg *.HEIC ; rm *.HEIC"
 alias update='sudo apt-get update && sudo apt-get upgrade'
 alias mac_update='brew update && brew upgrade'
 
+# Mac system update and app store update
+alias mac_system='sudo softwareupdate -ia'
+alias app_update='sudo softwareupdate -ia --verbose'
+
 # Go to chromebook shared thing
 alias shared='cd /mnt/chromeos/MyFiles/Downloads/'
 
@@ -46,6 +100,8 @@ alias create='virtualenv env && source env/bin/activate && pip3 -r requirements.
 # source the env
 alias env='source env/bin/activate'
 
+
+#wipes and recreates
 alias force='rm -rf env/ && virtualenv env && source env/bin/activate && pip3 -r requirements.txt'
 
 # Check the status of the servers
@@ -115,5 +171,7 @@ fi
 
 # See if this will even work
 #$(thefuck --alias)
-# this is the second the fuck
-#eval $(thefuck --alias)
+
+#php shit for tranquilityeditor
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"

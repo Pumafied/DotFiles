@@ -17,6 +17,11 @@ set smartcase
 
 "-------------Key Bindings---------------"
 
+"Check for mac updated
+"softwareupdate -l
+"Install all availible updates mac
+"softwareupdate -i -a
+
 set number
 "Sets the leader char to comma
 let mapleader = ","
